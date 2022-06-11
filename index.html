@@ -10,50 +10,96 @@
 	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<style type="text/tailwindcss">
+		@layer utilities{
+			.container{
+		    @apply max-w-7xl md:m-auto m-4 py-16
+	      }
+		 .header{
+            @apply grid justify-items-stretch 
+		 } 
+		 .header__btn{
+		   @apply	justify-self-end text-4xl inline-block md:hidden text-right ml-auto pr-4
+		 }
+		 .header-menu{
+			@apply justify-self-start md:justify-self-end py-4   md:flex justify-end md:space-x-16
+		 }
+		 .header-menu__item{
+		  @apply font-bold text-2xl hover:text-red-400
+		 }
+		}
+		.banner{
+          @apply grid md:grid-cols-3 gap-8
+		}
+		.banner-content{
+			@apply order-2 text-left md:text-left text-center md:order-1 md:col-span-2
+		}
+		.banner-content_title{
+			@apply font-bold text-6xl
+		}
+		.banner-content_desc{
+			@apply text-2xl py-16
+		}
+		.banner-content__btn{
+			@apply bg-red-400 p-4 font-bold text-white  
+		}
+		.banner-picture{
+			@apply order-1 md:col-span-1 md:order-2
+		}
+		.banner-picture__img{
+        @apply rounded-full w-64 md:m-auto  m-16  ml-auto
+		}
+	</style>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="">
-
-	<div class=" max-w-7xl md:m-auto m-4 py-4">
-		<div class="grid justify-items-stretch "> 
-			<div class="justify-self-end"><button id="button" class="text-4xl inline-block md:hidden text-right ml-auto "><i class='bx bx-menu'></i></button></div>
-			<ul id="main" class="justify-self-start md:justify-self-end py-4  hidden md:flex justify-end md:space-x-16">
-				<li class="font-bold text-2xl "><a href="Page3.html">Works</a></li>
-				<li class="font-bold text-2xl"><a href="Page2.html">Blog</a></li>
-				<li class="font-bold text-2xl"><a href="Page4.html">Contact</a></li>
+<body >
+	<div class=" container">
+		<div class="header">
+			<div class="header__btn">
+				<button id="button"><i class='bx bx-menu'></i></button>
+			</div>
+			<ul id="main" class="header-menu hidden">
+				<li class=" header-menu__item "><a href="Page3.html">Works</a></li>
+				<li class="header-menu__item"><a href="Page2.html">Blog</a></li>
+				<li class="header-menu__item"><a href="Page4.html">Contact</a></li>
 			</ul>
 		</div>
-		
-       
-    </div>
-	<div class="max-w-7xl md:m-auto m-4 pt-36">
-		<div class="grid md:grid-cols-3 gap-8">
-			<div class="order-2 text-left md:text-left text-center md:order-1 md:col-span-2">
-				<h1 class="font-bold text-6xl">Hi, I am Giang,
+
+
+	</div>
+
+
+	</div>
+	<div class=" container">
+		<div class="banner">
+			<div class="banner-content">
+				<h1 class="banner-content_title">Hi, I am Giang,
 					Creative Technologist</h1>
-				<p class="text-2xl py-16">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+				<p class="banner-content_desc">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
 					Velit officia consequat
 					duis enim
 					velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-				<button class="bg-red-400 p-4 font-bold text-white  ">Download Resume</button>
+				<button class="banner-content__btn">Download Resume</button>
 			</div>
-			<div class=" order-1 md:col-span-1 md:order-2 ">
-				<img class="rounded-full w-64 md:m-auto  m-16  ml-auto" src="Src/img/Logo.JPG" alt="">
+			<div class="  banner-picture">
+				<img class="banner-picture__img" src="Src/img/Logo.JPG" alt="">
 			</div>
 		</div>
-	</div>	
+	</div>
 	<div class="bg-cyan-100 mt-36">
-		<div class="max-w-7xl md:m-auto m-4">
+		<div class=" container">
 			<div class="flex justify-between pt-4">
-			<h1 class="text-4xl ">Recent posts</h1>
-				<a class="text-2xl text-sky-500 hidden md:block " href="">View all</a>
+				<h1 class="text-4xl">Recent posts</h1>
+				<a class="text-2xl  hidden md:block hover:text-sky-500 " href="">View all</a>
 			</div>
 			<div class="grid md:grid-cols-2 gap-8 py-4">
-				<div class="bg-white  p-8">
+				<div class="bg-white  p-4 ">
 					<h2 class="text-4xl font-bold">Making a design system from scratch</h2>
-					<div class="pt-4"><span class="text-2xl mr-4 ">12 Feb 2020</span>|<span class="text-2xl pl-4 ">Design, Pattern</span></div>
+					<div class="pt-4"><span class="text-2xl mr-4 ">12 Feb 2020</span>|<span
+							class="text-2xl pl-4 ">Design, Pattern</span></div>
 					<p class="text-2xl pt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
 						Velit officia consequat
 						duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
@@ -70,8 +116,8 @@
 
 		</div>
 	</div>
-	<div class="max-w-7xl md:m-auto m-4 ">
-		<a class="text-4xl inline-block pt-16" href="">Featured works</a>
+	<div class=" container ">
+		<h2 class="text-4xl text-center md:text-left pt-16" href="">Featured works</h2>
 		<div class="grid md:grid-cols-3 py-8">
 			<div class="col-span-1 w-80 ">
 				<img class="rounded-lg" src="Src/img/content-1.png" alt="">
@@ -122,15 +168,15 @@
 		</div>
 		<hr>
 	</div>
-	<footer class="max-w-7xl md:m-auto m-4 py-32 text-center">
+	<footer class=" container">
 		<div class="flex justify-center">
 			<div class="text-6xl p-4"><a href=""><i class='bx bxl-facebook-square'></i></a></div>
-			<div class="text-6xl p-4"><a href=""><i class='bx bxl-instagram' ></i></a></div>
-			<div class="text-6xl p-4"><a href=""><i class='bx bxl-twitter' ></i></a></div>
+			<div class="text-6xl p-4"><a href=""><i class='bx bxl-instagram'></i></a></div>
+			<div class="text-6xl p-4"><a href=""><i class='bx bxl-twitter'></i></a></div>
 			<div class="text-6xl p-4"><a href=""><i class='bx bxl-linkedin-square'></i></a></div>
 
 		</div>
-		<p>Copyright ©2020 All rights reserved </p>
+		<p class="text-center">Copyright ©2020 All rights reserved </p>
 
 	</footer>
 	<script src="Src/main.js"></script>
